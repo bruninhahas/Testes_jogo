@@ -11,7 +11,7 @@ import sys
 pygame.init()
 
 #  carrega os sons
-som_aviso = pygame.mixer.Sound(r'Assets/Audio/notificacao.mp3')
+som_aviso = pygame.mixer.Sound(r'Assets/Audio/game_bonus.mp3')
 som_beep = pygame.mixer.Sound(r'Assets/Audio/beep.mp3')
 
 #
@@ -25,12 +25,14 @@ FONT = pygame.font.SysFont(None, 36)
 MOEDA_TAMANHO = (20, 20)
 
 # Carregar a imagem do fundo (altere o caminho para sua imagem real)
-background_img = pygame.image.load(r'Assets/Ocean_8/6.png').convert()
+background_img = pygame.image.load(r'Assets/Ocean_6/5.png').convert()
+# ESCALA A IMAGEM DE FUNDO PARA O TAMANHO DA TELA
+background_img = pygame.transform.scale(background_img, (WIDTH, HEIGHT))
 
 # barco
-barco_sprite_img = pygame.image.load(r'Assets/PNG/boat01.png').convert_alpha()
+barco_sprite_img = pygame.image.load(r'Assets/PNG/barco.png').convert_alpha()
 # Opcionalmente, ajuste o tamanho do sprite
-barco_sprite_img = pygame.transform.smoothscale(barco_sprite_img, (80, 40))
+barco_sprite_img = pygame.transform.smoothscale(barco_sprite_img, (80, 60))
 
 #mar
 sea_sprite = pygame.image.load(r'Assets/PNG/mar001.png').convert()
