@@ -22,7 +22,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Navio Cata Moedas!!!")
 clock = pygame.time.Clock()
 FONT = pygame.font.SysFont(None, 36)
-MOEDA_TAMANHO = (20, 20)
+MOEDA_TAMANHO = (55, 55)
 
 # Carregar a imagem do fundo (altere o caminho para sua imagem real)
 background_img = pygame.image.load(r'Assets/Ocean_6/5.png').convert()
@@ -32,7 +32,7 @@ background_img = pygame.transform.scale(background_img, (WIDTH, HEIGHT))
 # barco
 barco_sprite_img = pygame.image.load(r'Assets/PNG/barco.png').convert_alpha()
 # Opcionalmente, ajuste o tamanho do sprite
-barco_sprite_img = pygame.transform.smoothscale(barco_sprite_img, (80, 60))
+barco_sprite_img = pygame.transform.smoothscale(barco_sprite_img, (130, 130))
 
 #mar
 sea_sprite = pygame.image.load(r'Assets/PNG/mar001.png').convert()
@@ -71,9 +71,9 @@ def load_animation_frames(prefix, total_frames=10, tamanho=MOEDA_TAMANHO):
     return frames
 
 # Carregar sprites das moedas (alterar caminhos conforme seus arquivos)
-ouro_frames   = load_animation_frames(r"Assets\PNG\Gold\Gold")
-prata_frames  = load_animation_frames(r"Assets\PNG\Silver\Silver")
-bronze_frames = load_animation_frames(r"Assets\PNG\Bronze\Bronze")
+ouro_frames   = load_animation_frames(r"Assets\PNG\peixes\peixes")
+prata_frames  = load_animation_frames(r"Assets\PNG\Estrela\Estrela")
+bronze_frames = load_animation_frames(r"Assets\PNG\Concha\Concha")
 VALOR_MOEDAS  = {'ouro': 10, 'prata': 5, 'bronze': 1}
 
 # Classe das moedas animadas
